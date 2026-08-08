@@ -106,8 +106,9 @@ section {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 60px;
+  align-items: start;
 }
 .about-grid h2 {
   font-size: 30px;
@@ -116,6 +117,13 @@ section {
 .about-grid p {
   color: var(--muted);
   font-size: 15.5px;
+}
+.about-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: grayscale(0.15);
 }
 
 .stats {
@@ -251,6 +259,9 @@ footer {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .about-photo img {
+    max-width: 200px;
   }
   .practice-grid {
     grid-template-columns: 1fr;
